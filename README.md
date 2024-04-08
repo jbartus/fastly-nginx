@@ -8,10 +8,10 @@
 - `terraform apply`
 
 ## caching
-- curl the vm ip, notice the lack of a cache-control header
-- ssh into the vm
+- copy/paste the curl command from the terraform output, notice the lack of a cache-control header
+- copy/paste the ssh command to ssh into the vm
 - `sudo tail -f /var/log/nginx/access.log`, notice your curl request is already there
-- load the url from the terraform output in a browser tab, back in the terminal notice the request came from a new (fastly) ip
+- click the link (or copy/paste the url) to open it in a browser tab, notice back in the terminal the request came from a new (fastly) ip
 - refresh a few times, notice the requests don't hit nginx
 - inspect a request in chrome, notice the HITs and age header climbing up
 
